@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import {sayHi, welcome} from '..';
+import sayHi from '../index';
 
-console.log(`\nWelcome to the Brain Games! \n`);
-
-console.log(sayHi())
+console.log('\nWelcome to the Brain Games! \n');
+console.log(sayHi());
