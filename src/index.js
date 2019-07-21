@@ -26,6 +26,7 @@ const brainEven = () => {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${checkNum}".`);
       console.log(`Let's try again, ${name}`);
     }
+    return counter;
   };
   return checkAnswer(genNum(), 0);
 };
