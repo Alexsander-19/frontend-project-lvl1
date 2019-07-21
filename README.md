@@ -5,7 +5,7 @@
 
 ## brain-even 
 
-<a href="https://asciinema.org/a/aXq2DfmszTwfAKxdqzFQVNbUK" target="_blank"><img src="https://asciinema.org/a/aXq2DfmszTwfAKxdqzFQVNbUK.svg" /></a>
+<a href="https://asciinema.org/a/258447" target="_blank"><img src="https://asciinema.org/a/258447.svg" /></a>
 
 * install dependency:  
   ```make install```
