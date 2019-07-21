@@ -5,7 +5,7 @@
 
 ## brain-even 
 
-<script id="asciicast-aXq2DfmszTwfAKxdqzFQVNbUK" src="https://asciinema.org/a/aXq2DfmszTwfAKxdqzFQVNbUK.js" async></script>
+<a href="https://asciinema.org/a/aXq2DfmszTwfAKxdqzFQVNbUK" target="_blank"><img src="https://asciinema.org/a/aXq2DfmszTwfAKxdqzFQVNbUK.svg" /></a>
 
 * install dependency:  
   ```make install```
