@@ -34,6 +34,22 @@ const wrong = (name, answer, corr) => {
   console.log(`Let's try again, ${name}`);
 };
 
+const genOperator = () => {
+  const arrOperator = ['+', '-', '*'];
+  return arrOperator[Math.floor(Math.random() * 3)];
+};
+
+const mathOperation = (num1, num2, operator) => {
+  switch (operator) {
+    case '-':
+      return num1 - num2;
+    case '+':
+      return num1 + num2;
+    default:
+      return num1 * num2;
+  }
+};
 export {
-  askName, sayHi, genNum, askAnswer, evenNum, askQuestion, sayCongrat, sayCorrect, wrong, welcome,
+  askName, sayHi, genNum, askAnswer, evenNum, askQuestion, sayCongrat,
+  sayCorrect, wrong, welcome, genOperator, mathOperation,
 };

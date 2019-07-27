@@ -1,6 +1,6 @@
 import {
   sayHi, askName, genNum, askAnswer, evenNum, askQuestion, sayCongrat, sayCorrect, wrong,
-} from './libs';
+} from './lib';
 
 export default () => {
   const name = askName();
