@@ -19,10 +19,10 @@ export default () => {
     if (answer === gcd && counter < 2) {
       sayCorrect();
       counter += 1;
-      return checkAnswer(genNum(10, 40), genNum(10, 15), counter);
+      return checkAnswer(genNum(10, 100), genNum(20, 100), counter);
     }
     console.log(gcd);
     return wrong(name, answer, gcd);
   };
-  checkAnswer(genNum(10, 40), genNum(10, 15), 0);
+  checkAnswer(genNum(10, 100), genNum(20, 100), 0);
 };
