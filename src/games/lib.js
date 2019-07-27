@@ -49,7 +49,19 @@ const mathOperation = (num1, num2, operator) => {
       return num1 * num2;
   }
 };
+
+const getGcd = (num1, num2) => {
+  let counter = num1 > num2 ? num2 : num1;
+  const result = 1;
+  while (counter > 1) {
+    if (num1 % counter === 0 && num2 % counter === 0) {
+      return counter;
+    }
+    counter -= 1;
+  }
+  return result;
+};
 export {
   askName, sayHi, genNum, askAnswer, evenNum, askQuestion, sayCongrat,
-  sayCorrect, wrong, welcome, genOperator, mathOperation,
+  sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd,
 };
