@@ -61,7 +61,16 @@ const getGcd = (num1, num2) => {
   }
   return result;
 };
+
+const genArr = (n) => {
+  const arr = [];
+  for (let i = 0; i <= n; i += 1) {
+    arr.push(i);
+  }
+  return arr;
+};
+
 export {
   askName, sayHi, genNum, askAnswer, evenNum, askQuestion, sayCongrat,
-  sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd,
+  sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd, genArr,
 };
