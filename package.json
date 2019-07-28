@@ -17,7 +17,10 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "brain-games",
+    "javascript games"
+  ],
   "author": "Aleksandr",
   "license": "ISC",
   "devDependencies": {

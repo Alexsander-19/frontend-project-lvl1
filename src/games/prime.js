@@ -1,6 +1,6 @@
 import {
   askName, sayHi, genNum, askAnswer, sayQuestion, sayCongratulation,
-  sayCorrect, wrong, checkPrime, gameInfo,
+  sayCorrect, wrong, isPrime, gameInfo,
 } from './lib';
 
 export default () => {
@@ -10,7 +10,7 @@ export default () => {
   const checkAnswer = (num, c) => {
     sayQuestion(num);
     const answer = askAnswer();
-    const prime = checkPrime(num);
+    const prime = isPrime(num);
     let counter = c;
     if (answer === prime && counter === 2) {
       sayCorrect();

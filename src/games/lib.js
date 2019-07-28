@@ -13,7 +13,7 @@ const sayHi = (name) => {
 
 const genNum = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-const evenNum = (n) => {
+const isEven = (n) => {
   if (n % 2 === 0) {
     return 'yes';
   }
@@ -69,7 +69,7 @@ const genArr = (n) => {
   return arr;
 };
 
-const checkPrime = (num) => {
+const isPrime = (num) => {
   for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0 && num > 2) {
       return 'no';
@@ -81,7 +81,7 @@ const checkPrime = (num) => {
 
 const gameInfo = info => console.log(info);
 export {
-  askName, sayHi, genNum, askAnswer, evenNum, sayQuestion, sayCongratulation,
+  askName, sayHi, genNum, askAnswer, isEven, sayQuestion, sayCongratulation,
   sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd, genArr,
-  checkPrime, gameInfo,
+  isPrime, gameInfo,
 };

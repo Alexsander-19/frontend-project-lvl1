@@ -1,5 +1,5 @@
 import {
-  sayHi, askName, genNum, askAnswer, evenNum, sayQuestion,
+  sayHi, askName, genNum, askAnswer, isEven, sayQuestion,
   sayCongratulation, sayCorrect, wrong, gameInfo,
 } from './lib';
 
@@ -10,7 +10,7 @@ export default () => {
   const checkAnswer = (number, c) => {
     let counter = c;
     sayQuestion(number);
-    const even = evenNum(number);
+    const even = isEven(number);
     const answer = askAnswer();
     if (answer === even && counter === 2) {
       sayCorrect();
