@@ -5,7 +5,7 @@ import {
 } from './lib';
 
 export default () => {
-  gameInfo('Find the greatest common divisor of given numbers.\n')
+  gameInfo('Find the greatest common divisor of given numbers.\n');
   const name = askName();
   sayHi(name);
   const checkAnswer = (num1, num2, c) => {

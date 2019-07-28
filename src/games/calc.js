@@ -4,7 +4,7 @@ import {
 } from './lib';
 
 export default () => {
-  gameInfo('What is the result of the expression?\n')
+  gameInfo('What is the result of the expression?\n');
   const name = askName();
   sayHi(name);
   const checkAnswer = (num1, num2, operator, c) => {
