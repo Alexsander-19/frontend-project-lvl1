@@ -14,5 +14,6 @@
 * run game:   
   ```brain-games```
 
+## asciinema demonstration
 
-[![asciicast](https://asciinema.org/a/d2WLugxV34ELGADG69PtwnJPU.svg)](https://asciinema.org/a/d2WLugxV34ELGADG69PtwnJPU)
+[![asciicast](https://asciinema.org/a/lfLOih8JtmdI1VLkJ0NCVvbiL.svg)](https://asciinema.org/a/lfLOih8JtmdI1VLkJ0NCVvbiL)
