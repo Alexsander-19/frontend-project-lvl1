@@ -15,3 +15,4 @@
   ```brain-games```
 
 
+[![asciicast](https://asciinema.org/a/d2WLugxV34ELGADG69PtwnJPU.svg)](https://asciinema.org/a/d2WLugxV34ELGADG69PtwnJPU)
