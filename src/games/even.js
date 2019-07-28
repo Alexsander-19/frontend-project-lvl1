@@ -1,18 +1,20 @@
 import {
-  sayHi, askName, genNum, askAnswer, evenNum, askQuestion, sayCongrat, sayCorrect, wrong,
+  sayHi, askName, genNum, askAnswer, evenNum, sayQuestion,
+  sayCongratulation, sayCorrect, wrong, gameInfo,
 } from './lib';
 
 export default () => {
+  gameInfo('Answer "yes" if number even otherwise answer "no".\n');
   const name = askName();
   sayHi(name);
   const checkAnswer = (number, c) => {
     let counter = c;
-    askQuestion(number);
+    sayQuestion(number);
     const even = evenNum(number);
     const answer = askAnswer();
     if (answer === even && counter === 2) {
       sayCorrect();
-      return sayCongrat(name);
+      return sayCongratulation(name);
     } if (answer === even && counter < 2) {
       sayCorrect();
       counter += 1;

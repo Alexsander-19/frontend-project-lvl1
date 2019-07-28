@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const welcome = (game) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(game);
+  console.log(`Welcome to the Brain Games!${game}`);
 };
 
 const askName = () => readlineSync.question('May I have your name? ');
@@ -23,11 +22,11 @@ const evenNum = (n) => {
 
 const askAnswer = () => readlineSync.question('Your answer: ');
 
-const askQuestion = q => console.log(`Question: ${q}`);
+const sayQuestion = q => console.log(`Question: ${q}`);
 
 const sayCorrect = () => console.log('Correct!');
 
-const sayCongrat = name => console.log(`Congratulations, ${name}`);
+const sayCongratulation = name => console.log(`Congratulations, ${name}`);
 
 const wrong = (name, answer, corr) => {
   console.log(`"${answer}" is wrong answer ;(. Correct answer was "${corr}".`);
@@ -70,7 +69,19 @@ const genArr = (n) => {
   return arr;
 };
 
+const checkPrime = (num) => {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0 && num > 2) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};
+
+
+const gameInfo = info => console.log(info);
 export {
-  askName, sayHi, genNum, askAnswer, evenNum, askQuestion, sayCongrat,
+  askName, sayHi, genNum, askAnswer, evenNum, sayQuestion, sayCongratulation,
   sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd, genArr,
+  checkPrime, gameInfo,
 };

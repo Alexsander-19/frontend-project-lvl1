@@ -1,19 +1,20 @@
 import {
-  genOperator, askName, askAnswer, askQuestion, sayCorrect, sayCongrat,
-  sayHi, genNum, mathOperation, wrong,
+  genOperator, askName, askAnswer, sayQuestion, sayCorrect, sayCongratulation,
+  sayHi, genNum, mathOperation, wrong, gameInfo,
 } from './lib';
 
 export default () => {
+  gameInfo('What is the result of the expression?\n')
   const name = askName();
   sayHi(name);
   const checkAnswer = (num1, num2, operator, c) => {
     let counter = c;
-    askQuestion(`${num1} ${operator} ${num2}`);
+    sayQuestion(`${num1} ${operator} ${num2}`);
     const answer = askAnswer();
     const result = mathOperation(num1, num2, operator).toString();
     if (answer === result && counter === 2) {
       sayCorrect();
-      return sayCongrat(name);
+      return sayCongratulation(name);
     }
     if (answer === result && counter < 2) {
       sayCorrect();

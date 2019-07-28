@@ -1,20 +1,21 @@
 import {
-  sayHi, askName, genNum, askAnswer, askQuestion, sayCongrat, sayCorrect, wrong,
-  genArr,
+  sayHi, askName, genNum, askAnswer, sayQuestion, sayCongratulation, sayCorrect, wrong,
+  genArr, gameInfo,
 } from './lib';
 
 export default () => {
+  gameInfo('What number is missing in the progression?\n');
   const name = askName();
   sayHi(name);
   const checkAnswer = (n, num, c) => {
     const arr = genArr(10);
     let counter = c;
     const newArr = arr.splice(num, 1, '..');
-    askQuestion(`${arr.join(' ')}`);
+    sayQuestion(`${arr.join(' ')}`);
     const answer = askAnswer();
     if (newArr.join('') === answer && counter === 2) {
       sayCorrect();
-      return sayCongrat(name);
+      return sayCongratulation(name);
     }
     if (newArr.join('') === answer && counter < 2) {
       sayCorrect();

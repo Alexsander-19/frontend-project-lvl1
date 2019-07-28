@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { welcome } from '../games/lib';
-import gcdGame from '../games/gcd';
+import primeGame from '../games/prime';
 
 welcome('');
-gcdGame();
+primeGame();
