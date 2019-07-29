@@ -1,26 +1,26 @@
 import {
   sayHi, askName, genNum, askAnswer, isEven, sayQuestion,
-  sayCongratulation, sayCorrect, wrong, gameInfo,
+  sayCongratulation, sayCorrect, wrong,
 } from './lib';
 
 export default () => {
-  gameInfo('Answer "yes" if number even otherwise answer "no".\n');
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
   const name = askName();
-  sayHi(name);
+  console.log(sayHi(name));
   const checkAnswer = (number, c) => {
     let counter = c;
-    sayQuestion(number);
+    console.log(sayQuestion(number));
     const even = isEven(number);
     const answer = askAnswer();
     if (answer === even && counter === 2) {
-      sayCorrect();
-      return sayCongratulation(name);
+      console.log(sayCorrect());
+      return console.log(sayCongratulation(name));
     } if (answer === even && counter < 2) {
-      sayCorrect();
+      console.log(sayCorrect());
       counter += 1;
       return checkAnswer(genNum(10, 100), counter);
     }
-    return wrong(name, answer, even);
+    return console.log(wrong(name, answer, even));
   };
   checkAnswer(genNum(10, 100), 0);
 };

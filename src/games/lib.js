@@ -1,15 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const welcome = (game) => {
-  console.log(`Welcome to the Brain Games!${game}`);
-};
+const welcome = game => `Welcome to the Brain Games!${game}`;
 
 const askName = () => readlineSync.question('May I have your name? ');
 
-const sayHi = (name) => {
-  console.log(`Hello, ${name}\n
-  `);
-};
+const sayHi = name => `Hello, ${name}\n`;
 
 const genNum = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
@@ -22,16 +17,13 @@ const isEven = (n) => {
 
 const askAnswer = () => readlineSync.question('Your answer: ');
 
-const sayQuestion = q => console.log(`Question: ${q}`);
+const sayQuestion = q => `Question: ${q}`;
 
-const sayCorrect = () => console.log('Correct!');
+const sayCorrect = () => 'Correct!';
 
-const sayCongratulation = name => console.log(`Congratulations, ${name}`);
+const sayCongratulation = name => `Congratulations, ${name}`;
 
-const wrong = (name, answer, corr) => {
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${corr}".`);
-  console.log(`Let's try again, ${name}`);
-};
+const wrong = (name, answer, corr) => `"${answer}" is wrong answer ;(. Correct answer was "${corr}".\nLet's try again, ${name}`;
 
 const genOperator = () => {
   const arrOperator = ['+', '-', '*'];
@@ -79,9 +71,8 @@ const isPrime = (num) => {
 };
 
 
-const gameInfo = info => console.log(info);
 export {
   askName, sayHi, genNum, askAnswer, isEven, sayQuestion, sayCongratulation,
   sayCorrect, wrong, welcome, genOperator, mathOperation, getGcd, genArr,
-  isPrime, gameInfo,
+  isPrime,
 };

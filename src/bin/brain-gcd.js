@@ -2,5 +2,5 @@
 import { welcome } from '../games/lib';
 import gcdGame from '../games/gcd';
 
-welcome('');
+console.log(welcome(''));
 gcdGame();

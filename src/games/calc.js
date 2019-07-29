@@ -1,27 +1,27 @@
 import {
   genOperator, askName, askAnswer, sayQuestion, sayCorrect, sayCongratulation,
-  sayHi, genNum, mathOperation, wrong, gameInfo,
+  sayHi, genNum, mathOperation, wrong,
 } from './lib';
 
 export default () => {
-  gameInfo('What is the result of the expression?\n');
+  console.log('What is the result of the expression?\n');
   const name = askName();
-  sayHi(name);
+  console.log(sayHi(name));
   const checkAnswer = (num1, num2, operator, c) => {
     let counter = c;
-    sayQuestion(`${num1} ${operator} ${num2}`);
+    console.log(sayQuestion(`${num1} ${operator} ${num2}`));
     const answer = askAnswer();
     const result = mathOperation(num1, num2, operator).toString();
     if (answer === result && counter === 2) {
-      sayCorrect();
-      return sayCongratulation(name);
+      console.log(sayCorrect());
+      return console.log(sayCongratulation(name));
     }
     if (answer === result && counter < 2) {
-      sayCorrect();
+      console.log(sayCorrect());
       counter += 1;
       return checkAnswer(genNum(10, 20), genNum(10, 20), genOperator(), counter);
     }
-    return wrong(name, answer, result);
+    return console.log(wrong(name, answer, result));
   };
   checkAnswer(genNum(10, 20), genNum(10, 20), genOperator(), 0);
 };

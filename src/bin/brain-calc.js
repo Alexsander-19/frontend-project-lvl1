@@ -2,5 +2,5 @@
 import { welcome } from '../games/lib';
 import calcGame from '../games/calc';
 
-welcome('');
+console.log(welcome(''));
 calcGame();

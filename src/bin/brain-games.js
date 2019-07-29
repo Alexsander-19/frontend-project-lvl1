@@ -14,7 +14,7 @@ const listGame = `
   5. Play Brain-prime.
   6. Select this, to exit.
 `;
-welcome(`\nPlease select a game:\n${listGame}`);
+console.log(welcome(`\nPlease select a game:\n${listGame}`));
 const answer = askAnswer();
 switch (answer) {
   case '1':

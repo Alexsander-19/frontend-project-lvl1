@@ -2,6 +2,6 @@
 import { welcome } from '../games/lib';
 import evenGame from '../games/even';
 
-welcome('');
+console.log(welcome(''));
 
 evenGame();
