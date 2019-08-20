@@ -1,27 +1,21 @@
-import {
-  askName, sayHi, genNum, askAnswer, sayQuestion, sayCongratulation,
-  sayCorrect, wrong, isPrime,
-} from './lib';
 
-export default () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
-  const name = askName();
-  console.log(sayHi(name));
-  const checkAnswer = (num, c) => {
-    console.log(sayQuestion(num));
-    const answer = askAnswer();
-    const prime = isPrime(num);
-    let counter = c;
-    if (answer === prime && counter === 2) {
-      console.log(sayCorrect());
-      return console.log(sayCongratulation(name));
+import genNum from '../utils';
+import palyGame from '../index';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const primeData = () => {
+  const gameData = {};
+  const isPrime = (num) => {
+    for (let i = 2; i <= num / 2; i += 1) {
+      if (num % i === 0 && num > 2) {
+        return 'no';
+      }
     }
-    if (answer === prime && counter < 2) {
-      console.log(sayCorrect());
-      counter += 1;
-      return checkAnswer(genNum(15, 100), counter);
-    }
-    return console.log(wrong(name, answer, prime));
+    return 'yes';
   };
-  checkAnswer(genNum(15, 100), 0);
+  gameData.question = genNum();
+  gameData.answer = isPrime(gameData.question);
+  return gameData;
 };
+
+export default () => palyGame(description, primeData);

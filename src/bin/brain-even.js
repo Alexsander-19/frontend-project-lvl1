@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import { welcome } from '../games/lib';
-import evenGame from '../games/even';
+import playEven from '../games/even';
 
-console.log(welcome(''));
-
-evenGame();
+playEven();
