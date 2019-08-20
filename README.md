@@ -16,4 +16,4 @@
 
 ## asciinema demonstration
 
-[![asciicast](https://asciinema.org/a/lfLOih8JtmdI1VLkJ0NCVvbiL.svg)](https://asciinema.org/a/lfLOih8JtmdI1VLkJ0NCVvbiL)
+[![asciicast](https://asciinema.org/a/R130zFKUygtOsbT70fHeFUgL7.svg)](https://asciinema.org/a/R130zFKUygtOsbT70fHeFUgL7)
