@@ -1,17 +1,12 @@
-import genNum from '../utils';
-import palyGame from '../index';
+import { generationNumber, answerText } from '../utils';
+import palyGame from '..';
 
-const description = 'Answer "yes" if number even otherwise answer "no".\n';
+const description = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = n => n % 2 === 0;
 const evenData = () => {
-  const gameData = {};
-  const isEven = (n) => {
-    if (n % 2 === 0) {
-      return 'yes';
-    }
-    return 'no';
-  };
-  gameData.question = genNum();
-  gameData.answer = isEven(gameData.question);
+  const question = generationNumber();
+  const answer = answerText(isEven(question));
+  const gameData = { question, answer };
   return gameData;
 };
 

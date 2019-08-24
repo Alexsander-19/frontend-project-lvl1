@@ -1,27 +1,26 @@
+import { generationNumber } from '../utils';
+import playGame from '..';
 
-import genNum from '../utils';
-import playGame from '../index';
-
-const description = 'What is the result of the expression?\n';
+const description = 'What is the result of the expression?';
+const calculate = (num1, operator, num2) => {
+  switch (operator) {
+    case '-':
+      return num1 - num2;
+    case '+':
+      return num1 + num2;
+    default:
+      return num1 * num2;
+  }
+};
+const operators = ['+', '-', '*'];
+const generationOperator = (arr, randomNumber) => arr[randomNumber];
 const calcData = () => {
-  const gameData = {};
-  const mathOperation = (str) => {
-    const arr = str.split(' ');
-    switch (arr[1]) {
-      case '-':
-        return Number(arr[0]) - Number(arr[2]);
-      case '+':
-        return Number(arr[0]) + Number(arr[2]);
-      default:
-        return Number(arr[0]) * Number(arr[2]);
-    }
-  };
-  const genOperator = () => {
-    const arrOperator = ['+', '-', '*'];
-    return arrOperator[Math.floor(Math.random() * 3)];
-  };
-  gameData.question = `${genNum(5, 10)} ${genOperator()} ${genNum(5, 10)}`;
-  gameData.answer = mathOperation(gameData.question).toString();
+  const number1 = generationNumber(5, 10);
+  const number2 = generationNumber(5, 10);
+  const operator = generationOperator(operators, generationNumber(1, 3));
+  const question = `${number1} ${operator} ${number2}`;
+  const answer = calculate(number1, operator, number2).toString();
+  const gameData = { question, answer };
   return gameData;
 };
 

@@ -1,25 +1,24 @@
+import { generationNumber } from '../utils';
+import playGame from '..';
 
-import genNum from '../utils';
-import playGame from '../index';
-
-const description = 'Find the greatest common divisor of given numbers.\n';
-function gcdData() {
-  const gameData = {};
-  const getGcd = (num1, num2) => {
-    let counter = num1 > num2 ? num2 : num1;
-    const result = 1;
-    while (counter > 1) {
-      if (num1 % counter === 0 && num2 % counter === 0) {
-        return counter;
-      }
-      counter -= 1;
+const description = 'Find the greatest common divisor of given numbers.';
+const getGcd = (number1, number2) => {
+  let counter = number1 > number2 ? number2 : number1;
+  const result = 1;
+  while (counter > 1) {
+    if (number1 % counter === 0 && number2 % counter === 0) {
+      return counter;
     }
-    return result;
-  };
-  const num1 = genNum(10, 30);
-  const num2 = genNum(10, 25);
-  gameData.question = `${num1} ${num2}`;
-  gameData.answer = getGcd(num1, num2).toString();
+    counter -= 1;
+  }
+  return result;
+};
+function gcdData() {
+  const number1 = generationNumber(10, 30);
+  const number2 = generationNumber(10, 25);
+  const question = `${number1} ${number2}`;
+  const answer = getGcd(number1, number2).toString();
+  const gameData = { question, answer };
   return gameData;
 }
 

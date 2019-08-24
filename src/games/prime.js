@@ -1,21 +1,21 @@
 
-import genNum from '../utils';
-import palyGame from '../index';
+import { generationNumber, answerText } from '../utils';
+import playGame from '..';
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
-const primeData = () => {
-  const gameData = {};
-  const isPrime = (num) => {
-    for (let i = 2; i <= num / 2; i += 1) {
-      if (num % i === 0 && num > 2) {
-        return 'no';
-      }
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const isPrime = (num) => {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0 && num > 2) {
+      return false;
     }
-    return 'yes';
-  };
-  gameData.question = genNum();
-  gameData.answer = isPrime(gameData.question);
+  }
+  return true;
+};
+const primeData = () => {
+  const question = generationNumber();
+  const answer = answerText(isPrime(question));
+  const gameData = { question, answer };
   return gameData;
 };
 
-export default () => palyGame(description, primeData);
+export default () => playGame(description, primeData);
