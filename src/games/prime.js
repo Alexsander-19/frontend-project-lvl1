@@ -1,4 +1,3 @@
-
 import generationNumber from '../utils';
 import playGame from '..';
 
