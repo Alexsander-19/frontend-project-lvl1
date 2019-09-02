@@ -1,4 +1,4 @@
-import { generationNumber } from '../utils';
+import generationNumber from '../utils';
 import playGame from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -13,7 +13,7 @@ const getGcd = (number1, number2) => {
   }
   return result;
 };
-function gcdData() {
+function getData() {
   const number1 = generationNumber(10, 30);
   const number2 = generationNumber(10, 25);
   const question = `${number1} ${number2}`;
@@ -22,4 +22,4 @@ function gcdData() {
   return gameData;
 }
 
-export default () => playGame(description, gcdData);
+export default () => playGame(description, getData);
