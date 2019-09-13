@@ -1,4 +1,4 @@
-import generationNumber from '../utils';
+import getRandomNumber from '../utils';
 import playGame from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -14,7 +14,7 @@ const isPrime = (number) => {
   return true;
 };
 const getData = () => {
-  const question = generationNumber();
+  const question = getRandomNumber();
   const answer = isPrime(question) ? 'yes' : 'no';
   const gameData = { question, answer };
   return gameData;

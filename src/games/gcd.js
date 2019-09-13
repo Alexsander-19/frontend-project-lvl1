@@ -1,4 +1,4 @@
-import generationNumber from '../utils';
+import getRandomNumber from '../utils';
 import playGame from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -14,8 +14,8 @@ const getGcd = (number1, number2) => {
   return result;
 };
 function getData() {
-  const number1 = generationNumber(10, 30);
-  const number2 = generationNumber(10, 25);
+  const number1 = getRandomNumber(10, 30);
+  const number2 = getRandomNumber(10, 25);
   const question = `${number1} ${number2}`;
   const answer = getGcd(number1, number2).toString();
   const gameData = { question, answer };

@@ -1,3 +1,3 @@
-const generationNumber = (min = 10, max = 100) => Math.floor(Math.random() * (max - min) + min);
+const getRandomNumber = (min = 10, max = 100) => Math.floor(Math.random() * (max - min) + min);
 
-export default generationNumber;
+export default getRandomNumber;
