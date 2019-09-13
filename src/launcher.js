@@ -5,8 +5,7 @@ import playGcd from './games/gcd';
 import playPrime from './games/prime';
 import playProgression from './games/progression';
 
-const launchGame = () => {
-  const gameList = `
+const gameList = `
   1: Brain Even.
   2: Brain Calc.
   3: Brain Gcd.
@@ -14,6 +13,7 @@ const launchGame = () => {
   5: Brain Progression.
   6: Exit.
   `;
+const launchGame = () => {
   const userSelection = readlineSync.question(`Please select a game\n ${gameList}`);
   switch (userSelection) {
     case '1':

@@ -1,6 +1,12 @@
 import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
+const replayGame = (name, game) => {
+  const resumption = readlineSync.question(`\n${name}, would you like to replay game? (yes/no)\n`);
+  if (resumption === 'yes') {
+    game(1);
+  }
+};
 const playGame = (description, getData) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
@@ -23,10 +29,7 @@ const playGame = (description, getData) => {
     }
     console.log(`\n"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
     console.log(`Let's try again, ${name}`);
-    const resumption = readlineSync.question(`\n${name}, would you like to replay game? (yes/no)\n`);
-    if (resumption === 'yes') {
-      iter(1);
-    }
+    replayGame(name, iter);
   };
   iter(1);
 };
