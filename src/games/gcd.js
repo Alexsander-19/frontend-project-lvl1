@@ -4,14 +4,12 @@ import playGame from '..';
 const description = 'Find the greatest common divisor of given numbers.';
 const getGcd = (number1, number2) => {
   let counter = number1 > number2 ? number2 : number1;
-  const result = 1;
-  while (counter > 1) {
+  for (counter; counter > 1; counter -= 1) {
     if (number1 % counter === 0 && number2 % counter === 0) {
-      return counter;
+      break;
     }
-    counter -= 1;
   }
-  return result;
+  return counter;
 };
 function getData() {
   const number1 = getRandomNumber(10, 30);

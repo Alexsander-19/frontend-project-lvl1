@@ -5,24 +5,21 @@ const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 const maxProgressionStart = 10;
 const maxProgressionStep = 5;
-const editProgression = (start, step, length) => {
-  const array = [];
-  let counter = start;
-  array.push(counter);
-  for (let i = 1; i < length; i += 1) {
-    array.push(counter + step);
-    counter += step;
+const getProgression = (start, step, length) => {
+  const result = [];
+  for (let i = 0; i < length; i += 1) {
+    result.push(start + step * i);
   }
-  return array;
+  return result;
 };
 const getData = () => {
   const progressionStart = getRandomNumber(1, maxProgressionStart);
   const progressionStep = getRandomNumber(1, maxProgressionStep);
-  const array = editProgression(progressionStart, progressionStep, progressionLength);
-  const number = getRandomNumber(1, progressionLength);
-  const newArray = array.splice(number, 1, '..');
-  const question = array.join(' ');
-  const answer = newArray.join('');
+  const progression = getProgression(progressionStart, progressionStep, progressionLength);
+  const progressionItem = getRandomNumber(1, progressionLength);
+  const newProgression = progression.splice(progressionItem, 1, '..');
+  const question = progression.join(' ');
+  const answer = newProgression.join('');
   const gameData = { question, answer };
   return gameData;
 };
