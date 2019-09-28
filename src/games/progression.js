@@ -16,10 +16,10 @@ const getData = () => {
   const progressionStart = getRandomNumber(1, maxProgressionStart);
   const progressionStep = getRandomNumber(1, maxProgressionStep);
   const progression = getProgression(progressionStart, progressionStep, progressionLength);
-  const progressionItem = getRandomNumber(1, progressionLength);
-  const newProgression = progression.splice(progressionItem, 1, '..');
+  const elementIndex = getRandomNumber(0, progressionLength - 1);
+  const hiddenElement = progression.splice(elementIndex, 1, '..');
   const question = progression.join(' ');
-  const answer = newProgression.join('');
+  const answer = hiddenElement.toString();
   const gameData = { question, answer };
   return gameData;
 };
