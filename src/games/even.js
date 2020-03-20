@@ -2,7 +2,7 @@ import getRandomNumber from '../utils';
 import palyGame from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
-const isEven = n => n % 2 === 0;
+const isEven = (n) => n % 2 === 0;
 const getData = () => {
   const question = getRandomNumber();
   const answer = isEven(question) ? 'yes' : 'no';
