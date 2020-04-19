@@ -13,6 +13,6 @@
 * run game:   
   ```brain-games```
 
-## asciinema demonstration
+## Demonstration
 
 [![asciicast](https://asciinema.org/a/R130zFKUygtOsbT70fHeFUgL7.svg)](https://asciinema.org/a/R130zFKUygtOsbT70fHeFUgL7)
